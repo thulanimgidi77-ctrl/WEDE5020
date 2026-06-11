@@ -1,5 +1,5 @@
 # WEDE5020
-WEB DEVELOPMENT PROJECT
+Web Development Project
 
 ## Project Title
 TT Interior Design
