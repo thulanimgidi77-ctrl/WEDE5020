@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Title of the page-->
+    <title>TT Interior Designs - Consulation Booking</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+    <img src="images/Interior Design.jpg" alt="Company Logo">
+     <!--Navigation Bar-->
+     <h2>
+      <a href="index.html">Home</a> .
+      <a href="services.html">Services</a> .
+      <a href="consultations.html">Booking</a> .
+      <a href="about.html">About Us</a> .
+      <a href="contact.html">Contact Us</a>
+     </h2> 
+  </header>
+      <main>
+        <h1>Book a Consultation</h1>
+        <!--Booking form starts here-->
+        <form>
+            <!--User enters full name-->
+            <p>Full Name:</p>
+            <input type="text" required>
+
+            <!--User enter phone number-->
+            <p>Phone Number:</p>
+
+            <!--Only allows 10 numbers-->
+            <input type="tel" pattern="[0-9]{10}" 
+            maxlength="10" required>
+
+            <!--User enters email-->
+            <p>Email:</p>
+            <input type="email" required>
+
+            <!--Project Options-->
+            <p> Select Project</p>
+            <select>
+                <option>Office</option>
+                <option>Sit-Down Restaurant</option>
+                <option>Sitting room</option>
+                <option>Dining room</option>
+                <option>Kitchen</option>
+            </select>
+
+            <!--User selects a date-->
+            <p>Preferred Date:</p>
+            <input type="date" required>
+
+            <!--User enter extra information-->
+            <p>Message:</p>
+            <textarea></textarea>
+
+            <br><br>
+
+            <!--Submit button-->
+            <input type="submit">
+        </form>
+      </main>
+
+      <!--Footer-->
+      <footer>
+        <p><center>TT Interior Designs &copy;&trade;2026 All rights reserved.</center></p>
+      </footer>
+
+</body>
+</html>

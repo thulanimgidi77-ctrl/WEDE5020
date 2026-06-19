@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <!--Title displayed on the browsing tab-->
+    <title>TT Interior Designs</title>
+  <link rel="stylesheet" href="css/mystyle.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/aa/all.min.css">
+
+</head>
+    
+ <body>
+  <header>
+      <!--Logo displayed for the website-->
+      <div class="hamburger"></div>
+      <img src="images/Interior Design.jpg" alt="Logo class="logo-img" onerror="this.src='https://placehold.co/200x60?text=TT+Interior'"> 
+       <!--Navigation Bar-->
+     <h2>
+      <a href="index.html">Home</a> .
+      <a href="services.html">Services</a> .
+      <a href="consultations.html">Booking</a> .
+      <a href="about.html">About Us</a> .
+      <a href="contact.html">Contact Us</a>
+     </h2>
+  </header>
+      <main>
+       <div class="hero">
+        <h1 style="text-align: center;">Your vision, Your design</h1>
+        <p>Turning your vision into a reality,
+         a comfortable and modern space that reflects your unique style and personality.
+         Our designs combine practicality, simplicity and elegance.</p>
+        
+        <hr>
+        </div>
+
+        <div class="service-section">
+          <!--Services Section-->
+          <section id="services">
+          <h2><center>Our Services</center></h2>
+          <ul style="color: bisque;">
+            <li>Office Designs</li>
+            <pre>
+Space thats both modern and comfotable. 
+Providing you a perfect environment for those long working hours.
+            </pre>
+            <li>Home Interior Designs</li>
+            <pre>
+Elevating interiors with timeless elegance and 
+personalanized designs. We deliver this with all our home designs.
+            </pre>
+            <li>Sit-Down restaurants</li>
+            <pre>
+Comfortable, Modern and creative. We understand the 
+variations required to creating a space thats welcoming 
+and a reflection to your remarkable food.
+            </pre> 
+          </ul>
+          
+          
+        </section>
+        <div class="quote-banner">
+          <div>
+            <h3>Ready to transform your space?</h3>
+            <p>Get a free consultation and let's bring your vision to life.</p
+          </div>
+          <button class="btn" onclick="alert('Contact us on bookings page')">Get a Quote </button>
+        </div>
+      </main>
+       <!--Footer-->
+      <footer>
+        <p><center>TT Interior Designs &copy;&trade;2026 All rights resereved.</center></p>
+      </footer>
+    
+     
+</body>
+<script> 
+  //--- 1. Mobile Navigation --- //
+  const hamburger = document.querySelector(' .hamburger');
+  const navMenu = document.querySelector('nav ul');
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    })
+  }
+
+  // --- 2. Smooth Controlling for Nav Links ---//
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      if (this.getAttribute('href') === "#services") {
+        e.preventDefault();
+        const targetselection = document.querySelector(this.getAttribute('href'));
+        if (targetselection) {
+          targetselection.scrollIntoView({behavior: 'smooth'});
+        }
+      }
+    })
+  } )
+
+  // --- 3. Improve the "Get a Quote button" --- //
+  // Instead of a simple alert, we ask name or can move user to contact page
+  const qouteBtn = document.querySelector(' .btn');
+  if(qouteBtn) {
+    qouteBtn.addEventListener('click', function(e) {
+      // If you want to redirect to contact page:
+      // window.location.href = 'contact.html';
+
+      // For more aesthetic popup:
+      let name = prompt("Hey! What's your name?");
+      if (name) {
+        alert('Thank you ${name}! We have noted your request. We will contact you soon.');
+
+      }
+    })
+  }
+</script>
+
+</html
